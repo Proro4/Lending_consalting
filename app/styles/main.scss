@@ -129,6 +129,9 @@ h4{
   }
   &__block{
     display: flex;
+    &__img{
+      animation: showIt 2s 1;
+    }
     &__info{
       padding-left: 50px;
       margin-top: 66px;
@@ -144,6 +147,53 @@ h4{
         }
       }
     }
+  }
+}
+.showDown{
+  &.active{
+    animation: showDown 1s 1;
+  }
+}
+.showLeft{
+  &.active{
+    animation: showLeft 1s 1;
+  }
+}
+.showRight{
+  &.active{
+    animation: showRight 1s 1;
+  }
+}
+@keyframes showIt {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@keyframes showLeft {
+  0%{
+    transform: translate3d(100px,0px,0);
+  }
+  100%{
+    transform: translate3d(0,0px,0);
+  }
+}
+@keyframes showRight {
+  0%{
+    transform: translate3d(-100px,0px,0);
+  }
+  100%{
+    transform: translate3d(0,0px,0);
+  }
+}
+@keyframes showDown {
+  0%{
+    transform: translate3d(0,100px,0);
+  }
+  100%{
+    transform: translate3d(0,0px,0);
   }
 }
 .info-list{
