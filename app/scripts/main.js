@@ -21,3 +21,14 @@ $(window).scroll(function () {
         };
     });
 });
+$(document).ready(function () {
+    $('.openpopup').on('click',function (e) {
+        e.preventDefault();
+        $('.pop-up').addClass('open');
+        $('body').addClass('no-scroll');
+    });
+    $('.pop-up__block__exit').on('click',function () {
+        $('.pop-up').removeClass('open');
+        $('body').removeClass('no-scroll');
+    });
+});
